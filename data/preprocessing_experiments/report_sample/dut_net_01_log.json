@@ -1,0 +1,18 @@
+{
+    "sample_image": "data/raw\\dut_net\\dut_net_01.jpg",
+    "group": "dut_net",
+    "noise_estimate_relative": 0.0,
+    "method": "dut_net_preserve_strokes_bilateral",
+    "outputs": {
+        "histogram": "data/preprocessing_experiments\\report_sample\\dut_net_01_histogram.png",
+        "raw_gray": "data/preprocessing_experiments\\report_sample\\dut_net_01_gray_raw.png",
+        "processed": "data/preprocessing_experiments\\report_sample\\dut_net_01_final_processed.png",
+        "comparison": "data/preprocessing_experiments\\report_sample\\dut_net_01_comparison.png"
+    },
+    "technical_improvements": [
+        "Morphological multi-scale background division completely eliminates heavy fold and hand shadows without halo artifacts.",
+        "Stain surfaces in ancient documents are normalized back to white paper levels.",
+        "3x3 median filtering is strictly avoided on fine print to prevent 1-pixel stroke disconnection.",
+        "CLAHE is removed from background normalization branches to avoid amplifying background paper grain."
+    ]
+}
